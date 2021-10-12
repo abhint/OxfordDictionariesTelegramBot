@@ -7,7 +7,7 @@ load_dotenv()
 class OD(Client):
     def __init__(self,):
         super().__init__("session_name",
-                         bot_token=os.environ.get["BOT_TOKEN"],
+                         bot_token=os.environ.get("BOT_TOKEN"),
                          )
 
     async def start(self):
