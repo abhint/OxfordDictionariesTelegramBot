@@ -14,7 +14,10 @@ class OD(Client):
 
     async def start(self):
         await super().start()
-        print(f"{await self.get_chat}")
+        me = await self.get_me()
+        self.me = me.username
+        print(f"{me.username} is Online!")
 
     async def stop(self, *args):
-        await super().stop()
+        print(f"\n{self.me} is Offline!")
+        await super().stop(*args)
