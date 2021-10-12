@@ -12,7 +12,7 @@ class OD(Client):
                          bot_token=os.environ.get("BOT_TOKEN"),
                          plugins={
                              'root': 'bot/plugins'
-                         }
+                         },
                          )
 
     async def start(self):
