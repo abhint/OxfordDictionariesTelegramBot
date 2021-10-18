@@ -1,6 +1,3 @@
-# OxfordDictionariesTelegramBot
+# Oxford Dictionaries Telegram Bot
 
-### Install Requirements
-```sh
-$ pip install -r requirements.txt
-```
+**This is a telegram bot built using the Oxford Dictionary API** <br>Source: <a href="https://developer.oxforddictionaries.com/documentation"> Oxford Dictionaries API Documentation</a>
