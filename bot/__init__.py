@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import logging
 from logging.handlers import RotatingFileHandler
 from .env import get_env
