@@ -10,6 +10,6 @@ async def startMsg(_, msg):
     await msg.reply(START_TEXT)
 
 
-@OD.on_deleted_messages(filters.command(['help', 'h']))
+@OD.on_message(filters.command(['help', 'h']))
 async def onHelp(_, msg):
-    msg.reply(HELP_TEXT)
+    await msg.reply(HELP_TEXT)
