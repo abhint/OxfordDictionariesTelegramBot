@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 
-from logging import Logger
+from pyrogram import filters
 from ..oxforddictionaries import OD
 from ..helpers.oxforddic import oxfordRequests
 from bot import LOGGER
 
 
-@OD.on_message()
+@OD.on_message(filters.private)
 async def words(client, msg):
     msg_words = str(msg.text)
     LOGGER(__name__).info(f'{msg.chat.id} - {msg_words}')
