@@ -17,7 +17,7 @@ BOT_TOKEN = get_env(
 
 START_TEXT = (
     "Hi. ☺️\n"
-    "This is an Open Source Project available on GitHub."
+    "This is an Open Source Project available on GitHub.\n"
     "https://github.com/AbhijithNT/OxfordDictionariesTelegramBot/\n\n\n"
     "Subscribe @AbhijithNT 😅"
 )
