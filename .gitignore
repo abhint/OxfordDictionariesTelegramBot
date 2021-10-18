@@ -4,3 +4,4 @@ env
 __pycache__
 *.session
 *.txt
+text.py
