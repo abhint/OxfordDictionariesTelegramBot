@@ -1,5 +1,4 @@
 from pyrogram import Client
-import os
 from bot import (API_ID,
                  API_HASH,
                  BOT_TOKEN)
