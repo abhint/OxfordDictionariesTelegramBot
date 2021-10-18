@@ -2,7 +2,9 @@
 
 import requests
 import json
-from bot import APP_ID, APP_KEY
+from bot import (APP_ID,
+                 APP_KEY,
+                 LOGGER)
 
 
 async def oxfordRequests(word_id: str):
@@ -12,7 +14,7 @@ async def oxfordRequests(word_id: str):
     strictMatch = 'false'
     url = 'https://od-api.oxforddictionaries.com/api/v2/entries/'+language+'/' + \
         word_id.lower() + '?strictMatch='+strictMatch
-
+    LOGGER(__name__).info(f"{url}")
     definitions = []
     r = requests.get(url, headers={'app_id': app_id, 'app_key': app_key})
     json_dumps = json.dumps(r.json())
