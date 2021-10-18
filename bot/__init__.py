@@ -38,5 +38,4 @@ logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
 
 def LOGGER(name: str) -> logging.Logger:
-    """ get a Logger object """
     return logging.getLogger(name)
