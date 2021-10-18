@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import requests
 import json
 from bot import APP_ID, APP_KEY
