@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 from ..oxforddictionaries import OD
 from pyrogram import filters
 from ..helpers.oxforddic import oxfordRequests
