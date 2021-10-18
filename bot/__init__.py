@@ -21,9 +21,10 @@ START_TEXT = (
     "https://github.com/AbhijithNT/OxfordDictionariesTelegramBot/\n\n\n"
     "Subscribe @AbhijithNT 😅"
 )
-HELP_TEXT = 'I do not know what that is.' +\
-    'You can use it and write your own help text'
-
+HELP_TEXT = ('I do not know what that is.'
+             'You can use it and write your own help text'
+             'issues: https://github.com/AbhijithNT/OxfordDictionariesTelegramBot/issues'
+             )
 
 logging.basicConfig(
     level=logging.INFO,
