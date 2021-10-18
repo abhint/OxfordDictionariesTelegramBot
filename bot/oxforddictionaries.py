@@ -1,7 +1,8 @@
 from pyrogram import Client
 from bot import (API_ID,
                  API_HASH,
-                 BOT_TOKEN)
+                 BOT_TOKEN,
+                 LOGGER)
 
 
 class OD(Client):
@@ -14,13 +15,14 @@ class OD(Client):
                              'root': 'bot/plugins'
                          },
                          )
+        self.logger = LOGGER
 
     async def start(self):
         await super().start()
         me = await self.get_me()
         self.me = me.username
-        print(f"{me.username} is Online!")
+        self.logger(__name__).info(f"{me.username} is Online!")
 
     async def stop(self, *args):
-        print(f"\n{self.me} is Offline!")
+        self.logger(__name__).info(f"{self.me} is Offline!")
         await super().stop(*args)
