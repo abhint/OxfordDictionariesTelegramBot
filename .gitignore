@@ -3,5 +3,6 @@ env
 .vscode
 __pycache__
 *.session
-*.txt
 text.py
+OXF_log.txt
+me.txt
