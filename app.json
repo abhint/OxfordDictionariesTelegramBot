@@ -1,25 +1,33 @@
 {
-    "name": "Oxford Dictionary Telegram Bot",
-    "description": "This is a telegram bot built using the Oxford Dictionary API",
-    "repository": "https://github.com/AbhijithNT/OxfordDictionariesTelegramBot",
-    "keywords": ["telegram", "pyrogram", "telegram bot"],
-    "env": {
-      "BOT_TOKEN": {
-        "description": "Your Bot token from @Botfather",
-        "value": ""
-      },
-      "API_ID": {
-        "description": "Your API_ID from https://my.telegram.org/apps ",
-        "value": ""
-      },
-      "API_HASH": {
-        "description": "Your API_HASH from https://my.telegram.org/apps",
-        "value": ""
-      }
+  "name": "Oxford Dictionary Telegram Bot",
+  "description": "This is a telegram bot built using the Oxford Dictionary API",
+  "repository": "https://github.com/AbhijithNT/OxfordDictionariesTelegramBot",
+  "keywords": ["telegram", "pyrogram", "telegram bot"],
+  "env": {
+    "BOT_TOKEN": {
+      "description": "Your Bot token from @Botfather",
+      "value": ""
     },
-    "buildpacks": [
-      {
-        "url": "heroku/python"
-      }
-    ]
-  }
+    "API_ID": {
+      "description": "Your API_ID from https://my.telegram.org/apps ",
+      "value": ""
+    },
+    "API_HASH": {
+      "description": "Your API_HASH from https://my.telegram.org/apps",
+      "value": ""
+    },
+    "APP_ID": {
+      "description": "Your Oxford dictionary APP ID from https://developer.oxforddictionaries.com/",
+      "value": ""
+    },
+    "APP_KEY": {
+      "description": "Your Oxford dictionary APP KEY from https://developer.oxforddictionaries.com/",
+      "value": ""
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ]
+}
