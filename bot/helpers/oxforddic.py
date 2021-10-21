@@ -18,6 +18,7 @@ async def oxfordRequests(word_id: str, msg):
     logger = LOGGER(__name__)
     logger.info(f"{url}")
     definitions = []
+    example_text = []
     r = requests.get(url, headers={'app_id': app_id, 'app_key': app_key})
     json_dumps = json.dumps(r.json())
     json_loads = json.loads(json_dumps)
@@ -29,12 +30,15 @@ async def oxfordRequests(word_id: str, msg):
                 definitions.append(f"**{lex['lexicalCategory']['text']}:**")
                 for ent in lex['entries']:
                     for sen in ent['senses']:
+                        if 'examples' in sen:
+                            for ex in sen['examples']:
+                                example_text.append(f"**__{ex['text']}__**")
                         for def_ in sen['definitions']:
                             definitions.append(f"{def_}")
-        return definitions, word, audioFile
+        return definitions, word, audioFile, example_text
     except KeyError as e:
         logger.warning(f"{e} - {word_id}")
         await msg.reply(ERROR_404)
         word = None
         audioFile = None
-        return definitions, word, audioFile
+        return definitions, word, audioFile, example_text
