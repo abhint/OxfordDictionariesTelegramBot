@@ -33,8 +33,8 @@ async def oxfordRequests(word_id: str, msg):
                             definitions.append(f"{def_}")
         return definitions, word, audioFile
     except KeyError as e:
-        logger.warning(e)
+        logger.warning(f"{e} - {word_id}")
         await msg.reply(ERROR_404)
-        audioFile = None
         word = None
-        return definitions, audioFile, word
+        audioFile = None
+        return definitions, word, audioFile
