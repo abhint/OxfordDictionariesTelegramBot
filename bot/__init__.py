@@ -21,6 +21,7 @@ START_TEXT = (
     "https://github.com/AbhijithNT/OxfordDictionariesTelegramBot/\n\n\n"
     "Subscribe @AbhijithNT 😅"
 )
+ERROR_404 = "No entry was found matching the selection parameters; OR an invalid filter was specified."
 HELP_TEXT = ('I do not know what that is.'
              'You can use it and write your own help text'
              'issues: https://github.com/AbhijithNT/OxfordDictionariesTelegramBot/issues'
