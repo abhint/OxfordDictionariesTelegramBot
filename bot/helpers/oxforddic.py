@@ -2,13 +2,14 @@
 
 import requests
 import json
+from pyrogram.types import Message
 from bot import (APP_ID,
                  APP_KEY,
                  ERROR_404,
                  LOGGER)
 
 
-async def oxfordRequests(word_id: str, msg):
+async def oxford_requests(word_id: str, msg: Message):
     app_id = APP_ID
     app_key = APP_KEY
     language = 'en-gb'
