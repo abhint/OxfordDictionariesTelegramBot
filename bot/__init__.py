@@ -21,13 +21,14 @@ BOT_TOKEN = get_env(
 START_TEXT = (
     "Hi. ☺️\n"
     "This is an Open Source Project available on GitHub.\n"
-    "https://github.com/AbhijithNT/OxfordDictionariesTelegramBot/\n\n\n"
+    "https://github.com/abhint/OxfordDictionariesTelegramBot\n\n\n"
     "Subscribe @AbhijithNT 😅"
 )
 ERROR_404 = "No entry was found matching the selection parameters; OR an invalid filter was specified."
 HELP_TEXT = ('I do not know what that is.'
              'You can use it and write your own help text'
-             'issues: https://github.com/AbhijithNT/OxfordDictionariesTelegramBot/issues'
+             'issues: https://github.com/abhint/OxfordDictionariesTelegramBot/issues'
+             'if any [Abhijith](tg://user?id=429320566)'
              )
 
 logging.basicConfig(
