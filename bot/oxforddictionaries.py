@@ -11,10 +11,9 @@ class OD(Client):
                          api_id=API_ID,
                          api_hash=API_HASH,
                          bot_token=BOT_TOKEN,
-                         plugins={
-                             'root': 'bot/plugins'
-                         },
+                         plugins=dict(root='bot/plugins')
                          )
+        self.me = None
         self.logger = LOGGER
 
     async def start(self):
