@@ -4,6 +4,9 @@ import logging
 from logging.handlers import RotatingFileHandler
 from .env import get_env
 
+__version__ = "0.1.1"
+__author__ = 'Abhijith'
+
 APP_ID = get_env(
     'APP_ID', 'Enter your Oxford Dictionaries APP ID: ')
 APP_KEY = get_env(
