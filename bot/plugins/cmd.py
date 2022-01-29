@@ -6,10 +6,10 @@ from bot import START_TEXT, HELP_TEXT
 
 
 @OD.on_message(filters.command(["start"]))
-async def startMsg(_, msg):
+async def start_msg(_, msg):
     await msg.reply(START_TEXT)
 
 
 @OD.on_message(filters.command(['help', 'h']))
-async def onHelp(_, msg):
+async def on_help(_, msg):
     await msg.reply(HELP_TEXT)
