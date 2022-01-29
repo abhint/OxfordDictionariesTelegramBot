@@ -2,7 +2,7 @@
 
 from pyrogram import filters
 from ..oxforddictionaries import OD
-from ..helpers.oxforddic import oxfordRequests
+from ..helpers.oxforddic import oxford_requests
 from bot import LOGGER
 
 
