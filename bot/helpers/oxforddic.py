@@ -2,19 +2,20 @@
 
 import requests
 import json
+from pyrogram.types import Message
 from bot import (APP_ID,
                  APP_KEY,
                  ERROR_404,
                  LOGGER)
 
 
-async def oxfordRequests(word_id: str, msg):
+async def oxford_requests(word_id: str, msg: Message):
     app_id = APP_ID
     app_key = APP_KEY
     language = 'en-gb'
-    strictMatch = 'false'
+    strict_match = 'false'
     url = 'https://od-api.oxforddictionaries.com/api/v2/entries/'+language+'/' + \
-        word_id.lower() + '?strictMatch='+strictMatch
+        word_id.lower() + '?strictMatch='+strict_match
     logger = LOGGER(__name__)
     logger.info(f"{url}")
     definitions = []
@@ -23,7 +24,7 @@ async def oxfordRequests(word_id: str, msg):
     json_dumps = json.dumps(r.json())
     json_loads = json.loads(json_dumps)
     try:
-        audioFile = json_loads['results'][0]['lexicalEntries'][0]['entries'][0]['pronunciations'][0]['audioFile']
+        audio_file = json_loads['results'][0]['lexicalEntries'][0]['entries'][0]['pronunciations'][0]['audioFile']
         word = json_loads['word']
         for re in json_loads['results']:
             for lex in re['lexicalEntries']:
@@ -35,10 +36,10 @@ async def oxfordRequests(word_id: str, msg):
                                 example_text.append(f"**__{ex['text']}__**")
                         for def_ in sen['definitions']:
                             definitions.append(f"{def_}")
-        return definitions, word, audioFile, example_text
+        return definitions, word, audio_file, example_text
     except KeyError as e:
         logger.warning(f"{e} - {word_id}")
         await msg.reply(ERROR_404)
         word = None
-        audioFile = None
-        return definitions, word, audioFile, example_text
+        audio_file = None
+        return definitions, word, audio_file, example_text
